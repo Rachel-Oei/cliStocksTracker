@@ -180,7 +180,7 @@ class Portfolio(metaclass=utils.Singleton):
                 colorWarningFlag = False
             elif type(color) == str:
                 if (color.startswith("#")) or (
-                    color in webcolors.CSS3_NAMES_TO_HEX.keys()
+                    color in webcolors.CSS3_NAMES_TO_HEX
                 ):
                     colorWarningFlag = False
 
