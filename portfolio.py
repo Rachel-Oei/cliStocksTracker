@@ -180,7 +180,7 @@ class Portfolio(metaclass=utils.Singleton):
                 colorWarningFlag = False
             elif type(color) == str:
                 if (color.startswith("#")) or (
-                    color in webcolors.CSS3_NAMES_TO_HEX
+                    color in webcolors.names("css3") 
                 ):
                     colorWarningFlag = False
 
@@ -303,8 +303,7 @@ class Graph:
             elif self.colors[i].startswith("#"):
                 color = webcolors.hex_to_rgb(self.colors[i])
             else:
-                color = webcolors.hex_to_rgb(
-                    webcolors.CSS3_NAMES_TO_HEX[self.colors[i]]
+                color = webcolors.hex_to_rgb(webcolors.names("css3")[color_name]
                 )
 
             self.plot.plot(
